@@ -1,0 +1,71 @@
+$circle-diameter: 20px;
+$dna-row-width: 200px;
+$dna-row-border: 1px;
+$count-dna-row: 16;
+$duration: 2s;
+$timing-function: ease-in-out;
+.main {
+  background-color: $black;
+  min-height: 100vh;
+}
+
+.h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.row-dna {
+  width: $dna-row-width;
+  display: flex;
+  justify-content: space-between;
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    width: $circle-diameter;
+    height: $circle-diameter;
+    border-radius: 50%;
+    animation-timing-function: $timing-function;
+    animation-duration: $duration;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    box-shadow: 10px 13px 20px 5px rgb(131, 74, 74);
+  }
+  &:before {
+    background-color: blue;
+    animation-name: left-to-right;
+  }
+  &:after {
+    background-color: red;
+    animation-name: right-to-left;
+  }
+}
+
+@for $i from 2 through $count-dna-row {
+  .row-dna:nth-child(#{$i}) {
+    &:after,
+    &:before {
+      animation-delay: #{($i / 10) - 0.1}s;
+    }
+  }
+}
+
+@keyframes left-to-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX($dna-row-width - $circle-diameter);
+  }
+}
+
+@keyframes right-to-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-$dna-row-width + $circle-diameter);
+  }
+}

@@ -1,0 +1,114 @@
+.main {
+  background: linear-gradient(108deg, #ffe000 0%, #c3b23a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__card-wrap {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+  }
+}
+
+.main-wrap {
+  max-width: 1228px;
+  border-radius: 24px;
+  background: #f7f7f7;
+  padding: 64px;
+  width: 100%;
+}
+
+.title-1 {
+  color: #171400;
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 68px */
+}
+
+.title-5 {
+  font-size: 20px;
+  font-style: normal;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.2px;
+}
+
+.txt {
+  /* Card description */
+  font-family: Saira Condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  &_semibold {
+    font-weight: 600;
+  }
+  &_medium {
+    font-weight: 500;
+  }
+}
+
+.txt_black {
+  color: #242424;
+}
+
+.txt_grey {
+  color: #505050;
+}
+
+.txt_brown-1 {
+  color: #3a3300;
+}
+
+.txt_yellow {
+  color: #cfbd40;
+}
+
+.txt_brown-2 {
+  color: #4d4a4a;
+}
+
+.txt--font-saira {
+  font-family: "Saira Condensed", sans-serif;
+}
+
+.btn {
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  &_yellow {
+    background: #ffe000;
+  }
+}
+
+.card {
+  max-width: 345px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0.66414px 2.21381px 0px rgba(0, 0, 0, 0.02),
+    0px 1.59602px 5.32008px 0px rgba(0, 0, 0, 0.03),
+    0px 3.00517px 10.01724px 0px rgba(0, 0, 0, 0.04),
+    0px 5.36071px 17.86905px 0px rgba(0, 0, 0, 0.04),
+    0px 10.02663px 33.42209px 0px rgba(0, 0, 0, 0.05),
+    0px 24px 80px 0px rgba(0, 0, 0, 0.07);
+  &__content {
+    padding: 16px;
+  }
+  &__location {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+  &__title {
+    margin-bottom: 12px;
+  }
+  &__txt {
+    margin-bottom: 40px;
+  }
+}

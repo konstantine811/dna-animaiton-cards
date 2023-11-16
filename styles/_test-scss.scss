@@ -1,0 +1,34 @@
+@mixin create-container($width, $padding: 0 15px) {
+  max-width: $width;
+  padding: $padding;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  @include create-container(1010px);
+  &-lg {
+    @include create-container(1130px);
+  }
+  &-md {
+    @include create-container(1000px, 0 25px);
+  }
+}
+
+%flex-common {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  @extend %flex-common;
+  color: blue;
+  width: 500px;
+}
+
+.item-2 {
+  @extend %flex-common;
+  color: blue;
+  width: 500px;
+}
